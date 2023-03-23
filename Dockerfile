@@ -10,7 +10,7 @@ RUN apt-get -y install python3 \
              iputils-ping \
              pciutils \
              vim
-RUN wget https://trex-tgn.cisco.com/trex/release/v3.02.tar.gz && \
+RUN wget https://trex-tgn.cisco.com/trex/release/v3.02.tar.gz --no-check-certificate && \
     tar -zxvf v3.02.tar.gz -C / && \
     chown root:root /v3.02  && \
     rm v3.02.tar.gz
